@@ -1,5 +1,6 @@
-Movie Ticket Booking\n
-Project Description:\n 
+Movie Ticket Booking
+
+Project Description: 
 In today's fast-paced world, efficient and hassle-free movie ticket management is crucial for enhancing the overall cinema experience, since cinema industry is one of the biggest entertainment industries in the world. The proposed project aims to create an efficient and user-friendly platform for users to book and manage movie tickets. The project incorporates various data structures, algorithms, file handling and a terminal-based interface.
 The Main features of the system include:
 1.	User Authentication: The system will incorporate a secure login system to ensure only authorized users can access and use the ticket booking functionalities.
