@@ -11,4 +11,5 @@ The Main features of the system include:
 6.	Seat Selection: Users will have the option to choose their preferred seats from a seating arrangement.
 
 Languages or Tools to be used: C++, Github, CodeBlocks
+
 Supervisor’s Name: Dr. Md. Shariful Islam
