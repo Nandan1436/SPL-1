@@ -1,0 +1,6 @@
+#ifndef MOVIESCHEDULE_H_INCLUDED
+#define MOVIESCHEDULE_H_INCLUDED
+
+void movieSchedule();
+
+#endif // MOVIESCHEDULE_H_INCLUDED

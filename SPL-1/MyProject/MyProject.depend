@@ -1,4 +1,47 @@
 # depslib dependency file v1.0
-1691775341 source:d:\spl-1\myproject\main.cpp
+1692856488 source:d:\spl-1\myproject\main.cpp
 	<bits/stdc++.h>
+	"MainMenu.h"
+
+1692854968 d:\spl-1\myproject\mainmenu.h
+
+1692855492 source:d:\spl-1\myproject\userlogin.cpp
+	<bits/stdc++.h>
+	"UserLogIn.h"
+
+1692855358 d:\spl-1\myproject\userlogin.h
+
+1692855518 source:d:\spl-1\myproject\usersignup.cpp
+	<bits/stdc++.h>
+	"UserSignUp.h"
+
+1692855451 d:\spl-1\myproject\usersignup.h
+
+1692855766 source:d:\spl-1\myproject\movieschedule.cpp
+	<bits/stdc++.h>
+	"MovieSchedule.h"
+
+1692855706 d:\spl-1\myproject\movieschedule.h
+
+1692856061 source:d:\spl-1\myproject\admin.cpp
+	<bits/stdc++.h>
+	"Admin.h"
+
+1692856010 d:\spl-1\myproject\admin.h
+
+1692857090 source:d:\spl-1\myproject\exitconfirmation.cpp
+	<bits/stdc++.h>
+	"MainMenu.h"
+	"ExitConfirmation.h"
+
+1692856474 d:\spl-1\myproject\exitconfirmation.h
+
+1692856920 source:d:\spl-1\myproject\mainmenu.cpp
+	<bits/stdc++.h>
+	"MainMenu.h"
+	"UserLogIn.h"
+	"UserSignUp.h"
+	"MovieSchedule.h"
+	"Admin.h"
+	"ExitConfirmation.h"
 

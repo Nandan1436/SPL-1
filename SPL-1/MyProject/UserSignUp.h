@@ -1,0 +1,6 @@
+#ifndef USERSIGNUP_H_INCLUDED
+#define USERSIGNUP_H_INCLUDED
+
+void userSignUp();
+
+#endif // USERSIGNUP_H_INCLUDED

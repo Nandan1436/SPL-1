@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1691840025 source:d:\spl-1\filehandling\main.cpp
+	<iostream>
+	<fstream>
+
