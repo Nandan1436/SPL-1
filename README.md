@@ -16,5 +16,5 @@ The Main features of the system include:
 
 ### Acknowledgements
 
-- [https://www.geeksforgeeks.org/csv-file-management-using-c/](https://www.geeksforgeeks.org/csv-file-management-using-c/)https://www.geeksforgeeks.org/csv-file-management-using-c/
-- [https://www.youtube.com/watch?v=Ma0P9T4nTDA](https://www.youtube.com/watch?v=Ma0P9T4nTDA)https://www.youtube.com/watch?v=Ma0P9T4nTDA
+- [https://www.geeksforgeeks.org/csv-file-management-using-c/](url)
+- [https://www.youtube.com/watch?v=Ma0P9T4nTDA](url)
