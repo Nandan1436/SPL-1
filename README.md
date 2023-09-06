@@ -15,5 +15,6 @@ The Main features of the system include:
 6.	Seat Selection: Users will have the option to choose their preferred seats from a seating arrangement.
 
 ###Acknowledgements
-[https://www.geeksforgeeks.org/csv-file-management-using-c/](https://www.geeksforgeeks.org/csv-file-management-using-c/)https://www.geeksforgeeks.org/csv-file-management-using-c/
-[https://www.youtube.com/watch?v=Ma0P9T4nTDA](https://www.youtube.com/watch?v=Ma0P9T4nTDA)https://www.youtube.com/watch?v=Ma0P9T4nTDA
+
+- [https://www.geeksforgeeks.org/csv-file-management-using-c/](https://www.geeksforgeeks.org/csv-file-management-using-c/)https://www.geeksforgeeks.org/csv-file-management-using-c/
+- [https://www.youtube.com/watch?v=Ma0P9T4nTDA](https://www.youtube.com/watch?v=Ma0P9T4nTDA)https://www.youtube.com/watch?v=Ma0P9T4nTDA
