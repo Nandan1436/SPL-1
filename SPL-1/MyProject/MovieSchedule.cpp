@@ -7,9 +7,5 @@ void movieSchedule(int person)
 {
     cout<<"Movie Schedule"<<endl;
     cout<<"Choose date: ";
-    if(person==1){
 
-        string ch;
-        while()
-    }
 }

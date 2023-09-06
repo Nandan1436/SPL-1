@@ -8,40 +8,42 @@
 
 using namespace std;
 
-void mainMenu(){
+void mainMenu()
+{
     char choice;
     cout<<"Welcome"<<endl;
-    cout<<"1.User Login"<<endl;
-    cout<<"2.User Sign Up"<<endl;
-    cout<<"3.Show movie schedule"<<endl;
-    cout<<"4.Admin Login"<<endl;
-    cout<<"5.Exit"<<endl;
-    cout<<"Enter choice: ";
+    cout<<"1.User"<<endl;
+    cout<<"2.Admin"<<endl;
+    cout<<"3.Quit"<<endl;
     cin>>choice;
 
-    while(choice>'5' || choice<'1')
+    while(choice>'3' || choice<'1')
     {
         cout<<"Wrong key entered. Please try again"<<endl;
         cout<<"\nEnter choice: ";
         cin>>choice;
     }
 
-    switch(choice){
-    case '1':
-        userLogIn();
-        break;
-    case '2':
-        userSignUp();
-        break;
-    case '3':
-        movieSchedule();
-        break;
-    case '4':
-        Admin();
-        break;
-    case '5':
-        exitConfirmation();
-        break;
+    if(choice=='1')Admin();
+    else if(choice=='2')
+    {
+        system("CLS");
+        cout<<"1.Login"<<endl;
+        cout<<"2.Sign Up"<<endl;
+        cin>>choice;
+        while(choice>'2' || choice<'1')
+        {
+            cout<<"Wrong key entered. Please try again"<<endl;
+            cout<<"\nEnter choice: ";
+            cin>>choice;
+        }
+        if(choice=='1')userLogIn();
+        else userSignUp();
+    }
+    else {
+        system("CLS");
+        cout<<"Quitting..."<<endl;
+        exit(0);
     }
 
 }
