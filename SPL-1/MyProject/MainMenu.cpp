@@ -11,9 +11,9 @@ using namespace std;
 void mainMenu()
 {
     char choice;
-    cout<<"Welcome"<<endl;
-    cout<<"1.User"<<endl;
-    cout<<"2.Admin"<<endl;
+    cout<<"WELCOME"<<endl;
+    cout<<"1.Admin"<<endl;
+    cout<<"2.User"<<endl;
     cout<<"3.Quit"<<endl;
     cin>>choice;
 
@@ -24,7 +24,10 @@ void mainMenu()
         cin>>choice;
     }
 
-    if(choice=='1')Admin();
+    if(choice=='1')
+    {
+        Admin();
+    }
     else if(choice=='2')
     {
         system("CLS");
@@ -40,10 +43,9 @@ void mainMenu()
         if(choice=='1')userLogIn();
         else userSignUp();
     }
-    else {
-        system("CLS");
-        cout<<"Quitting..."<<endl;
-        exit(0);
+    else
+    {
+        exitConfirmation();
     }
 
 }
