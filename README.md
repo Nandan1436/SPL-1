@@ -13,3 +13,7 @@ The Main features of the system include:
 4.	Movie Information: The system will display detailed information about each movie, including its title, genre, language, release date, and available show times.
 5.	Admin Panel: Administrators will have access to an admin interface to manage movie listings, show times, and view user bookings.
 6.	Seat Selection: Users will have the option to choose their preferred seats from a seating arrangement.
+
+###Acknowledgements
+[https://www.geeksforgeeks.org/csv-file-management-using-c/](https://www.geeksforgeeks.org/csv-file-management-using-c/)https://www.geeksforgeeks.org/csv-file-management-using-c/
+[https://www.youtube.com/watch?v=Ma0P9T4nTDA](https://www.youtube.com/watch?v=Ma0P9T4nTDA)https://www.youtube.com/watch?v=Ma0P9T4nTDA
