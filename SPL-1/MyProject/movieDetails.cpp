@@ -46,6 +46,7 @@ void movieDetails()
         }
 
     }
+    details.close();
     cout<<"To go back to Movie Schedule, press any key."<<endl;
     char ch;
     ch=getch();

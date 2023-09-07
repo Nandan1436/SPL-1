@@ -15,6 +15,8 @@ struct Movie
 
 void movieSchedule()
 {
+    system("CLS");
+
     ifstream inputFile("MovieList.txt");
     if(!inputFile.is_open())
     {
