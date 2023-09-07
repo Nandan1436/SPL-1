@@ -1,0 +1,6 @@
+#ifndef MOVIEDETAILS_H_INCLUDED
+#define MOVIEDETAILS_H_INCLUDED
+
+void movieDetails();
+
+#endif // MOVIEDETAILS_H_INCLUDED

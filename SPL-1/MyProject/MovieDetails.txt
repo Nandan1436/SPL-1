@@ -1,0 +1,14 @@
+1 Oppenheimer
+2 Biography,Drama,History
+3 July 2023
+4 The story of American scientist, J. Robert Oppenheimer, and his role in the development of the atomic bomb.
+**
+1 Barbie
+2 Adventure,Comedy,Fantasy
+3 July 2023
+4 Barbie suffers a crisis that leads her to question her world and her existence.
+**
+1 Avengers Endgame
+2 Action,Adventure,Drama
+3 April 2023
+4 After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.

@@ -45,6 +45,8 @@
 		<Unit filename="UserSignUp.cpp" />
 		<Unit filename="UserSignUp.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="movieDetails.cpp" />
+		<Unit filename="movieDetails.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

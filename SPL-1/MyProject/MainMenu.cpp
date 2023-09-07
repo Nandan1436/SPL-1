@@ -1,4 +1,5 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+#include <conio.h>
 #include "MainMenu.h"
 #include "UserLogIn.h"
 #include "UserSignUp.h"
@@ -15,13 +16,13 @@ void mainMenu()
     cout<<"1.Admin"<<endl;
     cout<<"2.User"<<endl;
     cout<<"3.Quit"<<endl;
-    cin>>choice;
+    choice=getch();
 
     while(choice>'3' || choice<'1')
     {
         cout<<"Wrong key entered. Please try again"<<endl;
         cout<<"\nEnter choice: ";
-        cin>>choice;
+        choice=getch();
     }
 
     if(choice=='1')
@@ -33,12 +34,12 @@ void mainMenu()
         system("CLS");
         cout<<"1.Login"<<endl;
         cout<<"2.Sign Up"<<endl;
-        cin>>choice;
+        choice=getch();
         while(choice>'2' || choice<'1')
         {
             cout<<"Wrong key entered. Please try again"<<endl;
             cout<<"\nEnter choice: ";
-            cin>>choice;
+            choice=getch();
         }
         if(choice=='1')userLogIn();
         else userSignUp();
