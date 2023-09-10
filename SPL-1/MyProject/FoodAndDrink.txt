@@ -1,0 +1,5 @@
+Popcorn(medium size),200
+Popcorn(large size),300
+Drink(Pepsi/7up/Fanta),150 
+Mini Burger,250
+French Fries,120

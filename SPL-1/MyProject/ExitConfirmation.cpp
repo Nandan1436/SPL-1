@@ -1,21 +1,26 @@
 #include <bits/stdc++.h>
+#include <conio.h>
 #include "MainMenu.h"
+#include "UserMenu.h"
 #include "ExitConfirmation.h"
 
 using namespace std;
 
-void exitConfirmation(){
-    system("CLS");
+bool exitConfirmation()
+{
+    system("cls");
     char choice;
-    cout<<"Are you sure you want to quit?"<<endl;
-    cout<<"YES(y) or NO(n)"<<endl;
-    cin>>choice;
 
-    if(choice=='Y'||choice=='y'){
-        exit(0);
+    cout<<"Are you sure you want to quit the program?"<<endl;
+    cout<<"YES(y) or NO(n)"<<endl;
+    choice=getch();
+    if(choice=='Y'||choice=='y')
+    {
+        return false;
     }
-    else {
-        system("CLS");
-        mainMenu();
+    else
+    {
+        system("cls");
+        return true;
     }
 }

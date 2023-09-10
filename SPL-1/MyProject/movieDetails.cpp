@@ -7,7 +7,7 @@ using namespace std;
 
 void movieDetails()
 {
-    system("CLS");
+    system("cls");
     ifstream details("MovieDetails.txt");
     cout<<"MOVIE DETAILS"<<endl<<endl;
     string line;
@@ -50,7 +50,7 @@ void movieDetails()
     cout<<"To go back to Movie Schedule, press any key."<<endl;
     char ch;
     ch=getch();
-    system("CLS");
-    movieSchedule();
+    system("cls");
+    return;
 
 }
