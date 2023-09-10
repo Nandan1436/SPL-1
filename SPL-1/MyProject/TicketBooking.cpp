@@ -151,16 +151,13 @@ void bookTicket(string email,string userName,char num,char slot)
             for(j=0; j<10; j++)
             {
                 outputFile<<seatArr[k][j]<<" ";
-                cout<<seatArr[k][j]<<" ";
             }
             outputFile<<"\n";
-            cout<<endl;
             k++;
         }
         else
         {
             outputFile<<allInfo[i]<<"\n";
-            cout<<allInfo[i]<<endl;
         }
     }
     char a;
