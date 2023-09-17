@@ -47,9 +47,9 @@ void movieDetails()
 
     }
     details.close();
-    cout<<"To go back to Movie Schedule, press any key."<<endl;
+    cout<<"To go back to Movie Schedule, enter any key."<<endl;
     char ch;
-    ch=getch();
+    cin>>ch;
     system("cls");
     return;
 

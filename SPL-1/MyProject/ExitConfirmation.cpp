@@ -13,7 +13,7 @@ bool exitConfirmation()
 
     cout<<"Are you sure you want to quit the program?"<<endl;
     cout<<"YES(y) or NO(n)"<<endl;
-    choice=getch();
+    cin>>choice;
     if(choice=='Y'||choice=='y')
     {
         return false;

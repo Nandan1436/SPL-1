@@ -44,6 +44,8 @@
 		<Unit filename="MovieSchedule.h" />
 		<Unit filename="TicketBooking.cpp" />
 		<Unit filename="TicketBooking.h" />
+		<Unit filename="TicketCancellation.cpp" />
+		<Unit filename="TicketCancellation.h" />
 		<Unit filename="UserLogIn.cpp" />
 		<Unit filename="UserLogIn.h" />
 		<Unit filename="UserMenu.cpp" />

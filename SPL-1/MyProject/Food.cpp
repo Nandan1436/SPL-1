@@ -30,7 +30,7 @@ void food()
     cout<<endl;
     cout<<"Press any key to return to User Menu."<<endl;
     char input;
-    input=getch();
+    cin>>input;
     return;
 
 }

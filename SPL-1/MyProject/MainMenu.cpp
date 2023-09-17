@@ -21,13 +21,13 @@ void mainMenu()
         cout<<"2.User"<<endl;
         cout<<"3.Quit"<<endl;
         cout<<"Enter choice: ";
-        choice=getch();
+        cin>>choice;
 
         while(choice>'3' || choice<'1')
         {
             cout<<"Wrong key entered. Please try again"<<endl;
             cout<<"\nEnter choice: ";
-            choice=getch();
+            cin>>choice;
         }
 
         if(choice=='1')
@@ -42,12 +42,12 @@ void mainMenu()
             cout<<"Press '1' to login in if you already have an account."<<endl;
             cout<<"Press '2' to create a new account."<<endl;
             cout<<"Enter choice: ";
-            choice=getch();
+            cin>>choice;
             while(choice>'2' || choice<'1')
             {
                 cout<<"Wrong key entered. Please try again"<<endl;
                 cout<<"\nEnter choice: ";
-                choice=getch();
+                cin>>choice;
             }
             if(choice=='1')userLogIn();
             else userSignUp();

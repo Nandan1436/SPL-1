@@ -15,9 +15,9 @@ void printReceipt(string email,string userName,double total,double pay)
     cout<<"Email: "<<email<<endl;
     cout<<"Amount paid: "<<pay<<endl;
     cout<<"Change: "<<pay-total<<endl<<endl;
-    cout<<"Press any key to return to User Menu";
+    cout<<"Enter any key to return to User Menu";
     char ch;
-    ch=getch();
+    cin>>ch;
     return;
 
 }
@@ -81,18 +81,33 @@ void bookTicket(string email,string userName,char num,char slot)
     }
 
     cout<<"-------------------------------------------------------------------"<<endl;
-    cout<<"                            SCREEN                                  "<<endl;
+    cout<<"                     S   C   R   E   E   N                           "<<endl;
     cout<<"-------------------------------------------------------------------"<<endl;
-    cout<<endl;
+    cout<<"-------------------------------------------------------------------"<<endl;
 
     for(i=0; i<10; i++)
     {
         for(j=0; j<10; j++)
         {
-            cout<<seatArr[i][j]<<"     ";
-            if(seatArr[i][j]!="X")seatsAvailable++;
+            //cout<<seatArr[i][j]<<"     ";
+            if(seatArr[i][j]=="X")
+            {
+                cout << "\033[31m";
+                cout<<left<<setw(7)<<seatArr[i][j];
+                cout << "\033[0m";
+
+            }
+            else
+            {
+                cout << "\033[32m";
+                cout<<left<<setw(7)<<seatArr[i][j];
+                cout << "\033[0m";
+                seatsAvailable++;
+            }
+
         }
-        cout<<endl<<endl;
+        cout<<endl;
+        cout<<"-------------------------------------------------------------------"<<endl;
     }
     int numOfTickets,check=0;
     cout<<"Enter number of tickets to buy(Maximum 5): ";
@@ -160,8 +175,8 @@ void bookTicket(string email,string userName,char num,char slot)
             outputFile<<allInfo[i]<<"\n";
         }
     }
-    char a;
-    cin>>a;
+    cout<<"Processing your seat selection...";
+    this_thread::sleep_for(chrono::seconds(2));
     makePayment(email,userName,numOfTickets);
     inputFile.close();
     outputFile.close();
