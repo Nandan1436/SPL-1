@@ -6,5 +6,5 @@ using namespace std;
 
 void Admin()
 {
-    bookTicket("","",'1','1');
+    //bookTicket("","",'1','1');
 }
