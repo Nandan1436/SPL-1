@@ -199,7 +199,6 @@ void recordBooking(ChosenMovie& chosenMovie)
     cout<<"Info taken"<<endl;
     movies.push_back(chosenMovie);
     file.close();
-    for(int i=0;i<movies.size();i++)cout<<movies[i].email<<endl;
     ofstream recordfile("BookingList.txt");
     for(int i=0; i<movies.size(); i++)
     {
