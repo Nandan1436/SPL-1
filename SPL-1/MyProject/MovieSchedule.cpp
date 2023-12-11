@@ -41,7 +41,7 @@ void movieSchedule(string email,string userName)
 
         cout<<"MOVIE SCHEDULE"<<endl<<endl;
         cout<<"--------------------------------------------------------------------------------------------------"<<endl;
-        cout<<left<<setw(15)<<"SERIAL NO."<<setw(10)<<"DATE"<<setw(15)<<"DAY"<<setw(40)<<"TITLE"<<setw(10)<<"TIME SLOTS"<<endl;
+        cout<<left<<setw(15)<<"SERIAL NO."<<setw(15)<<"Hall NO."<<setw(10)<<"DATE"<<setw(15)<<"DAY"<<setw(40)<<"TITLE"<<setw(10)<<"TIME SLOTS"<<endl;
         cout<<"--------------------------------------------------------------------------------------------------"<<endl;
 
         vector<Movie>movieList;

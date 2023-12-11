@@ -62,6 +62,7 @@ void userLogIn()
         string storedHashedPassword;
         userFile.ignore(numeric_limits<streamsize>::max(), ':');
         userFile >> storedHashedPassword;
+        userFile.close();
 
         cout << "**Enter your password: ";
         cin >> user.password;
