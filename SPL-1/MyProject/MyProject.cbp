@@ -31,7 +31,13 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="C:/msys64/mingw64/include" />
 		</Compiler>
+		<Linker>
+			<Add library="libcrypto" />
+			<Add library="libssl" />
+			<Add directory="C:/msys64/mingw64/lib" />
+		</Linker>
 		<Unit filename="Admin.cpp" />
 		<Unit filename="Admin.h" />
 		<Unit filename="ExitConfirmation.cpp" />
@@ -42,7 +48,8 @@
 		<Unit filename="MainMenu.h" />
 		<Unit filename="MovieSchedule.cpp" />
 		<Unit filename="MovieSchedule.h" />
-		<Unit filename="TicketBooking.cpp" />
+		<Unit filename="Recommendation.cpp" />
+		<Unit filename="Recommendation.h" />
 		<Unit filename="TicketCancellation.cpp" />
 		<Unit filename="TicketCancellation.h" />
 		<Unit filename="UserLogIn.cpp" />

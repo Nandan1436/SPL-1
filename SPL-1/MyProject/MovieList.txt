@@ -1,12 +1,12 @@
-17/12/23,Monday,Oppenheimer,09:00 am,04:15 pm
-17/12/23,Monday,Barbie,11:15 am,05:00 pm
-17/12/23,Monday,Avengers Endgame,01:30 pm,08:45 pm
-1812/23,Tuesday,Oppenheimer,08:00 am,03:15 pm
-18/12/23,Tuesday,Barbie,10:15 am,04:00 pm
-18/12/23,Tuesday,Avengers Endgame,12:30 pm,07:45 pm
-17/12/23,Monday,Jawan,09:00 am,04:15 pm
-17/12/23,Monday,Godzilla,11:15 am,05:00 pm
-17/12/23,Monday,3 Idiots,01:30 pm,08:45 pm
-18/12/23,Tuesday,Jawan,08:00 am,03:15 pm
-18/12/23,Tuesday,Godzilla,10:15 am,04:00 pm
-18/12/23,Tuesday,3 Idiots,12:30 pm,07:45 pm
+17/12/23,Monday,hall-1,Oppenheimer,09:00 am,04:15 pm
+17/12/23,Monday,hall-1,Barbie,11:15 am,05:00 pm
+17/12/23,Monday,hall-1,Avengers Endgame,01:30 pm,08:45 pm
+17/12/23,Monday,hall-2,Jawan,09:00 am,04:15 pm
+17/12/23,Monday,hall-2,Godzilla,11:15 am,05:00 pm
+17/12/23,Monday,hall-2,3 Idiots,01:30 pm,08:45 pm
+18/12/23,Tuesday,hall-1,Oppenheimer,08:00 am,03:15 pm
+18/12/23,Tuesday,hall-1,Barbie,10:15 am,04:00 pm
+18/12/23,Tuesday,hall-1,Avengers Endgame,12:30 pm,07:45 pm
+18/12/23,Tuesday,hall-2,Jawan,08:00 am,03:15 pm
+18/12/23,Tuesday,hall-2,Godzilla,10:15 am,04:00 pm
+18/12/23,Tuesday,hall-2,3 Idiots,12:30 pm,07:45 pm

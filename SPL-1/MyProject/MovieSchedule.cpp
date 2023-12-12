@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 #include "MovieSchedule.h"
 #include "movieDetails.h"
+#include "Recommendation.h"
 
 using namespace std;
 
@@ -8,6 +9,7 @@ struct Movie
 {
     string date;
     string day;
+    string hall;
     string title;
     vector<string>timeSlots;
 };
@@ -40,9 +42,9 @@ void movieSchedule(string email,string userName)
         }
 
         cout<<"MOVIE SCHEDULE"<<endl<<endl;
-        cout<<"--------------------------------------------------------------------------------------------------"<<endl;
-        cout<<left<<setw(15)<<"SERIAL NO."<<setw(15)<<"Hall NO."<<setw(10)<<"DATE"<<setw(15)<<"DAY"<<setw(40)<<"TITLE"<<setw(10)<<"TIME SLOTS"<<endl;
-        cout<<"--------------------------------------------------------------------------------------------------"<<endl;
+        cout<<"------------------------------------------------------------------------------------------------------------------"<<endl;
+        cout<<left<<setw(15)<<"SERIAL NO."<<setw(10)<<"DATE"<<setw(15)<<"DAY"<<setw(15)<<"Hall NO."<<setw(40)<<"TITLE"<<setw(10)<<"TIME SLOTS"<<endl;
+        cout<<"------------------------------------------------------------------------------------------------------------------"<<endl;
 
         vector<Movie>movieList;
         string line,snippet;
@@ -56,6 +58,9 @@ void movieSchedule(string email,string userName)
 
             getline(rowString,snippet,',');
             movie.day=snippet;
+
+            getline(rowString,snippet,',');
+            movie.hall=snippet;
 
             getline(rowString,snippet,',');
             movie.title=snippet;
@@ -75,6 +80,7 @@ void movieSchedule(string email,string userName)
             cout<<setw(15)<<i+1;
             cout<<setw(10)<<movieList[i].date;
             cout<<setw(15)<<movieList[i].day;
+            cout<<setw(15)<<movieList[i].hall;
             cout<<setw(32)<<movieList[i].title;
             for(int j=0; j<movieList[i].timeSlots.size(); j++)
             {
@@ -82,7 +88,7 @@ void movieSchedule(string email,string userName)
             }
             cout<<endl;
         }
-        cout<<"--------------------------------------------------------------------------------------------------"<<endl;
+        cout<<"------------------------------------------------------------------------------------------------------------------"<<endl;
         cout<<endl;
         cout<<"**Press 'd' to view movie details"<<endl;
         cout<<"**Press 't' to choose serial no. and time slot of show to watch"<<endl;
