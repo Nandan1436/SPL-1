@@ -235,6 +235,8 @@ void recordBooking(ChosenMovie& chosenMovie)
             stringstream genreStream(line);
             genreStream>>val;
             while(getline(genreStream,snippet,',')){
+                snippet.erase(0, snippet.find_first_not_of(" "));
+                snippet.erase(snippet.find_last_not_of(" ") + 1);
                 genres.push_back(snippet);
             }
             break;
@@ -244,7 +246,7 @@ void recordBooking(ChosenMovie& chosenMovie)
 
     ofstream userFile(USERS_DIRECTORY+chosenMovie.email+".txt",std::ios::app);
     userFile<<chosenMovie.showTitle<<","<<chosenMovie.showDate<<","<<chosenMovie.showTime<<","<<chosenMovie.serialNum<<","<<
-        chosenMovie.serialSlot<<",";
+        chosenMovie.serialSlot<<","<<chosenMovie.hall<<",";
     for(int i=0;i<chosenMovie.seats.size();i++){
         userFile<<chosenMovie.seats[i];
         if(i!=chosenMovie.seats.size()-1)userFile<<";";
@@ -253,8 +255,8 @@ void recordBooking(ChosenMovie& chosenMovie)
     for(int i=0;i<genres.size();i++){
         userFile<<genres[i];
         if(i!=genres.size()-1)userFile<<",";
-
     }
+    userFile<<"\n";
     userFile.close();
 }
 

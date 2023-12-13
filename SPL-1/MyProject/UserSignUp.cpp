@@ -80,7 +80,7 @@ void userSignUp()
     }
     string hashedPassword=sha256(user.password);
 
-    ofstream userFile(USERS_DIRECTORY + email + ".txt");
+    ofstream userFile(USERS_DIRECTORY + user.email + ".txt");
     if (!userFile) {
         cout << "Error creating user file." << endl;
         return;
