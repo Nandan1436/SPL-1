@@ -139,6 +139,7 @@ void printReceipt(const ChosenMovie& chosenMovie,double total,double pay)
     cout<<"Movie Title: "<<chosenMovie.showTitle<<endl;
     cout<<"Show Date: "<<chosenMovie.showDate<<endl;
     cout<<"Show Time: "<<chosenMovie.showTime<<endl;
+    cout<<"Hall number: "<<chosenMovie.hall<<endl;
     cout<<"Seats booked: ";
     for(int i=0; i<chosenMovie.seats.size(); i++)
     {
@@ -159,7 +160,9 @@ void makePayment(ChosenMovie& chosenMovie)
 {
     system("cls");
     double total,pay;
-    total=chosenMovie.seats.size()*500;
+    total=chosenMovie.seats.size();
+    if(chosenMovie.hall=="hall-1")total*=450;
+    else total*=550;
     cout<<"Total amount: "<<total<<endl;
     cout<<"Please pay the amount: "<<endl;
     cin>>pay;
@@ -219,7 +222,27 @@ void recordBooking(ChosenMovie& chosenMovie)
     }
     recordfile.close();
 
-    ofstream userFile(USERS_DIRECTORY+chosenMovie.email+".txt",ios::app);
+    vector<string>genres;
+    ifstream details("MovieDetails.txt");
+    int found=0;
+    while(getline(details,line))
+    {
+        if(line[0]=='1' && line.find(chosenMovie.showTitle)!=string::npos){
+            found=1;
+        }
+        if(line[0]=='2' && found){
+            string val;
+            stringstream genreStream(line);
+            genreStream>>val;
+            while(getline(genreStream,snippet,',')){
+                genres.push_back(snippet);
+            }
+            break;
+        }
+    }
+    details.close();
+
+    ofstream userFile(USERS_DIRECTORY+chosenMovie.email+".txt",std::ios::app);
     userFile<<chosenMovie.showTitle<<","<<chosenMovie.showDate<<","<<chosenMovie.showTime<<","<<chosenMovie.serialNum<<","<<
         chosenMovie.serialSlot<<",";
     for(int i=0;i<chosenMovie.seats.size();i++){
@@ -227,12 +250,11 @@ void recordBooking(ChosenMovie& chosenMovie)
         if(i!=chosenMovie.seats.size()-1)userFile<<";";
         else userFile<<",";
     }
-    for(int i=0;i<chosenMovie.size();i++){
-        userFile<<chosenMovie.seats[i];
-        if(i!=chosenMovie.seats.size()-1)userFile<<",";
+    for(int i=0;i<genres.size();i++){
+        userFile<<genres[i];
+        if(i!=genres.size()-1)userFile<<",";
 
     }
-
     userFile.close();
 }
 
@@ -323,8 +345,17 @@ void bookTicket(ChosenMovie& chosenMovie)
     vector<string>allInfo;
     for(i=0; i<numOfTickets; i++)
     {
-        cout<<"Enter seat number: ";
-        cin>>seats[i];
+        int error=1;
+        while(error){
+            cout<<"Enter seat number: ";
+            cin>>seats[i];
+            if(seats[i][0]<'A' || seats[i][0]>'J' || (seats[i].size()==2 && (seats[i][1]<'1' || seats[i][1]>'9')) ||
+               (seats[i].size()==3 && (seats[i][1]!='1' || seats[i][2]!='0'))){
+                    cout<<"Please enter correct seat number."<<endl;
+               }
+            else error=0;
+        }
+        error=1;
         chosenMovie.seats.push_back(seats[i]);
     }
 

@@ -22,7 +22,7 @@ struct currentMovie
 vector<movieHistory> UserHistory(string email)
 {
     ifstream file(USERS_DIRECTORY+email+".txt");
-    for(int i=0;i<5;i++){
+    for(int i=0;i<6;i++){
         string temp;
         getline(file,temp);
     }
@@ -86,7 +86,6 @@ map<string,int> findFreq(vector<movieHistory>& movies)
 vector<currentMovie> getGenres()
 {
     vector<currentMovie> movies;
-    system("cls");
     ifstream details("MovieDetails.txt");
     string line;
     while(getline(details,line))
@@ -97,6 +96,8 @@ vector<currentMovie> getGenres()
         }
         else if(line[0]=='2'){
             stringstream genres(line);
+            string val;
+            genres>>val;
             string snippet;
             while(getline(genres,snippet,',')){
                 temp.genre.push_back(snippet);

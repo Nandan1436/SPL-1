@@ -91,6 +91,7 @@ void userSignUp()
     userFile << "Date of Birth: " << user.dateOfBirth << endl;
     userFile << "Email: " << user.email << endl;
     userFile << "Hashed Password: " << hashedPassword << endl;
+    userFile << "History:" << endl;
 
     cout<<"Sign up successful!"<<endl;
     cout<<"Taking you to User Menu...";
