@@ -5,6 +5,8 @@
 
 using namespace std;
 
+const string USERS_DIRECTORY = "Users\\";
+
 struct Movie
 {
     string date;
@@ -16,14 +18,10 @@ struct Movie
 
 struct ChosenMovie
 {
-    string email;
-    string userName;
-    string showTitle;
-    string showDate;
-    string showTime;
+    string email,userName,showTitle,showDate,showTime,hall;
     char serialNum;
     char serialSlot;
-    vector<string>seats;
+    vector<string>seats,genres;
 };
 
 void bookTicket(ChosenMovie& chosenMovie);
@@ -90,6 +88,7 @@ void movieSchedule(string email,string userName)
         }
         cout<<"------------------------------------------------------------------------------------------------------------------"<<endl;
         cout<<endl;
+        recommendation(email);
         cout<<"**Press 'd' to view movie details"<<endl;
         cout<<"**Press 't' to choose serial no. and time slot of show to watch"<<endl;
         cout<<"**Press 'x' to return to User Menu"<<endl;
@@ -119,6 +118,7 @@ void movieSchedule(string email,string userName)
             cout<<"Enter time slot: ";
             cin>>chosenMovie.serialSlot;
             chosenMovie.showDate=movieList[chosenMovie.serialNum-'1'].date;
+            chosenMovie.hall=movieList[chosenMovie.serialNum-'1'].hall;
             chosenMovie.showTitle=movieList[chosenMovie.serialNum-'1'].title;
             chosenMovie.showTime=movieList[chosenMovie.serialNum-'1'].timeSlots[chosenMovie.serialSlot-'1'];
             bookTicket(chosenMovie);
@@ -218,6 +218,22 @@ void recordBooking(ChosenMovie& chosenMovie)
         recordfile<<"\n";
     }
     recordfile.close();
+
+    ofstream userFile(USERS_DIRECTORY+chosenMovie.email+".txt",ios::app);
+    userFile<<chosenMovie.showTitle<<","<<chosenMovie.showDate<<","<<chosenMovie.showTime<<","<<chosenMovie.serialNum<<","<<
+        chosenMovie.serialSlot<<",";
+    for(int i=0;i<chosenMovie.seats.size();i++){
+        userFile<<chosenMovie.seats[i];
+        if(i!=chosenMovie.seats.size()-1)userFile<<";";
+        else userFile<<",";
+    }
+    for(int i=0;i<chosenMovie.size();i++){
+        userFile<<chosenMovie.seats[i];
+        if(i!=chosenMovie.seats.size()-1)userFile<<",";
+
+    }
+
+    userFile.close();
 }
 
 void bookTicket(ChosenMovie& chosenMovie)
@@ -268,13 +284,11 @@ void bookTicket(ChosenMovie& chosenMovie)
     {
         for(j=0; j<10; j++)
         {
-            //cout<<seatArr[i][j]<<"     ";
             if(seatArr[i][j]=="X")
             {
                 cout << "\033[31m";
                 cout<<left<<setw(7)<<seatArr[i][j];
                 cout << "\033[0m";
-
             }
             else
             {
@@ -283,7 +297,6 @@ void bookTicket(ChosenMovie& chosenMovie)
                 cout << "\033[0m";
                 seatsAvailable++;
             }
-
         }
         cout<<endl;
         cout<<"-------------------------------------------------------------------"<<endl;
@@ -306,7 +319,8 @@ void bookTicket(ChosenMovie& chosenMovie)
         else check=1;
     }
 
-    string seats[numOfTickets],allInfo[132];
+    string seats[numOfTickets];
+    vector<string>allInfo;
     for(i=0; i<numOfTickets; i++)
     {
         cout<<"Enter seat number: ";
@@ -332,13 +346,13 @@ void bookTicket(ChosenMovie& chosenMovie)
             check=1;
         }
         if(!check)pos++;
-        allInfo[i++]=line;
+        allInfo.push_back(line);
     }
 
     input.close();
     k=0;
     ofstream outputFile("Seats.txt");
-    for(i=0; i<132; i++)
+    for(i=0; i<allInfo.size(); i++)
     {
         if(i>pos && i<=pos+10)
         {
