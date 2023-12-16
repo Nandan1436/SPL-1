@@ -44,6 +44,8 @@
 		<Unit filename="ExitConfirmation.h" />
 		<Unit filename="Food.cpp" />
 		<Unit filename="Food.h" />
+		<Unit filename="History.cpp" />
+		<Unit filename="History.h" />
 		<Unit filename="MainMenu.cpp" />
 		<Unit filename="MainMenu.h" />
 		<Unit filename="MovieSchedule.cpp" />

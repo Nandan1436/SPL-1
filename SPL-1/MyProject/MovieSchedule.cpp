@@ -38,7 +38,7 @@ void movieSchedule(string email,string userName)
             cout<<"Error opening file!"<<endl;
             exit(0);
         }
-
+        cout<<""<<endl;
         cout<<"MOVIE SCHEDULE"<<endl<<endl;
         cout<<"------------------------------------------------------------------------------------------------------------------"<<endl;
         cout<<left<<setw(15)<<"SERIAL NO."<<setw(10)<<"DATE"<<setw(15)<<"DAY"<<setw(15)<<"Hall NO."<<setw(40)<<"TITLE"<<setw(10)<<"TIME SLOTS"<<endl;
@@ -89,6 +89,11 @@ void movieSchedule(string email,string userName)
         cout<<"------------------------------------------------------------------------------------------------------------------"<<endl;
         cout<<endl;
         recommendation(email);
+
+        cout<<endl;
+        cout<<"Ticket price for hall-1: 450"<<endl;
+        cout<<"Ticket price for hall-2: 550"<<endl;
+
         cout<<"**Press 'd' to view movie details"<<endl;
         cout<<"**Press 't' to choose serial no. and time slot of show to watch"<<endl;
         cout<<"**Press 'x' to return to User Menu"<<endl;
@@ -245,6 +250,7 @@ void recordBooking(ChosenMovie& chosenMovie)
     details.close();
 
     ofstream userFile(USERS_DIRECTORY+chosenMovie.email+".txt",std::ios::app);
+    userFile<<"\n";
     userFile<<chosenMovie.showTitle<<","<<chosenMovie.showDate<<","<<chosenMovie.showTime<<","<<chosenMovie.serialNum<<","<<
         chosenMovie.serialSlot<<","<<chosenMovie.hall<<",";
     for(int i=0;i<chosenMovie.seats.size();i++){
@@ -256,7 +262,6 @@ void recordBooking(ChosenMovie& chosenMovie)
         userFile<<genres[i];
         if(i!=genres.size()-1)userFile<<",";
     }
-    userFile<<"\n";
     userFile.close();
 }
 

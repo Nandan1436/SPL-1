@@ -1,5 +1,2 @@
 ayon@gmail.com,AyonBoss,Oppenheimer,10/7/23,09:00 am,E4,E5
-hello@gmail.com,Nandan,Oppenheimer,17/12/23,09:00 am,F3,F4,F5
-hello@gmail.com,Nandan,Barbie,17/12/23,11:15 am,G4,G5
-hello@gmail.com,Nandan,Avengers Endgame,17/12/23,01:30 pm,G4,G5,G6
-hello@gmail.com,Nandan,Barbie,17/12/23,05:00 pm,G3
+

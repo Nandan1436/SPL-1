@@ -57,7 +57,6 @@ vector<movieHistory> UserHistory(string email)
             movie.seats.push_back(snippet);
         }
 
-        // Clear the genre vector before reading new genres
         movie.genre.clear();
         while (getline(rowString, snippet, ','))
         {

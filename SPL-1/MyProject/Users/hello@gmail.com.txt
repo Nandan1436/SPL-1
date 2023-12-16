@@ -1,10 +1,7 @@
-Full Name: Nandan Bhowmick
+Full Name: Nandan
 User Name: Nandan
 Date of Birth: 20/10/2003
 Email: hello@gmail.com
 Hashed Password: b729ea5b4107ead4f4dbd7eec1724ccad66b9a27b3efb0fb84e092715d40e4dd
 History:
-Oppenheimer,17/12/23,09:00 am,1,1,hall-1,F3;F4;F5,Biography,Drama,History
-Barbie,17/12/23,11:15 am,2,1,hall-1,G4;G5,Adventure,Comedy,Fantasy
-Avengers Endgame,17/12/23,01:30 pm,3,1,hall-1,G4;G5;G6,Action,Adventure,Drama
-Barbie,17/12/23,05:00 pm,2,2,hall-1,G3,Adventure,Comedy,Fantasy
+Barbie,17/12/23,11:15 am,2,1,hall-1,G4;G5;G4;G5,Adventure,Comedy,Fantasy

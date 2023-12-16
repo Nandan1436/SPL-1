@@ -4,6 +4,7 @@
 #include "Food.h"
 #include "MainMenu.h"
 #include "TicketCancellation.h"
+#include "History.h"
 
 using namespace std;
 
@@ -14,14 +15,15 @@ void UserMenu(string email,string userName)
     while(true)
     {
         char input;
-        cout<<"USER MENU"<<endl;
+        cout<<"*****USER MENU*****"<<endl;
         cout<<"1.Book a ticket"<<endl;
         cout<<"2.View Food and Drinks available in the cinema"<<endl;
         cout<<"3.Cancel a Ticket"<<endl;
-        cout<<"4.Log out"<<endl;
+        cout<<"4.View history"<<endl;
+        cout<<"5.Log out"<<endl;
         cout<<"Select a number: ";
         cin>>input;
-        while(input>'4' && input<'1')
+        while(input>'5' && input<'1')
         {
             cout<<"Incorrect input!Please try again."<<endl;
             cout<<"Select a number: ";
@@ -38,6 +40,9 @@ void UserMenu(string email,string userName)
         else if(input=='3')
         {
             cancelTicket(email,userName);
+        }
+        else if(input=='4'){
+            viewHistory(email);
         }
         else
         {

@@ -250,15 +250,16 @@
 	<bits/stdc++.h>
 	"MainMenu.h"
 
-1702299548 source:d:\spl-1 repo\spl-1\spl-1\myproject\mainmenu.cpp
+1702662131 source:d:\spl-1 repo\spl-1\spl-1\myproject\mainmenu.cpp
 	<bits/stdc++.h>
 	"MainMenu.h"
 	"UserLogIn.h"
 	"UserSignUp.h"
 	"MovieSchedule.h"
 	"Admin.h"
+	"UserMenu.h"
 	"ExitConfirmation.h"
-	"TicketBooking.h"
+	"History.h"
 
 1702299548 d:\spl-1 repo\spl-1\spl-1\myproject\userlogin.h
 
@@ -274,15 +275,17 @@
 
 1702299548 d:\spl-1 repo\spl-1\spl-1\myproject\moviedetails.h
 
-1702491936 source:d:\spl-1 repo\spl-1\spl-1\myproject\movieschedule.cpp
+1702723728 source:d:\spl-1 repo\spl-1\spl-1\myproject\movieschedule.cpp
 	<bits/stdc++.h>
 	"MovieSchedule.h"
 	"movieDetails.h"
 	"Recommendation.h"
 
-1702299548 source:d:\spl-1 repo\spl-1\spl-1\myproject\ticketcancellation.cpp
+1702703911 source:d:\spl-1 repo\spl-1\spl-1\myproject\ticketcancellation.cpp
 	<bits/stdc++.h>
 	"TicketCancellation.h"
+	<chrono>
+	<ctime>
 
 1702299548 d:\spl-1 repo\spl-1\spl-1\myproject\ticketcancellation.h
 	<bits/stdc++.h>
@@ -294,15 +297,16 @@
 	"UserMenu.h"
 	<openssl/sha.h>
 
-1702299548 source:d:\spl-1 repo\spl-1\spl-1\myproject\usermenu.cpp
+1702644940 source:d:\spl-1 repo\spl-1\spl-1\myproject\usermenu.cpp
 	<bits/stdc++.h>
 	"UserMenu.h"
 	"MovieSchedule.h"
 	"Food.h"
 	"MainMenu.h"
 	"TicketCancellation.h"
+	"History.h"
 
-1702482822 source:d:\spl-1 repo\spl-1\spl-1\myproject\usersignup.cpp
+1702722899 source:d:\spl-1 repo\spl-1\spl-1\myproject\usersignup.cpp
 	<bits/stdc++.h>
 	"UserSignUp.h"
 	"UserMenu.h"
@@ -311,7 +315,14 @@
 1702360514 d:\spl-1 repo\spl-1\spl-1\myproject\recommendation.h
 	<bits/stdc++.h>
 
-1702494471 source:d:\spl-1 repo\spl-1\spl-1\myproject\recommendation.cpp
+1702605473 source:d:\spl-1 repo\spl-1\spl-1\myproject\recommendation.cpp
 	<bits/stdc++.h>
 	"Recommendation.h"
+
+1702662315 source:d:\spl-1 repo\spl-1\spl-1\myproject\history.cpp
+	<bits/stdc++.h>
+	"History.h"
+
+1702605276 d:\spl-1 repo\spl-1\spl-1\myproject\history.h
+	<bits/stdc++.h>
 
