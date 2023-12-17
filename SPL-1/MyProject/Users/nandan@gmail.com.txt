@@ -1,10 +1,6 @@
-Full Name: Nandan Bhowmick
+Full Name: Nandan
 User Name: Nandan
 Date of Birth: 11/12/2003
 Email: nandan@gmail.com
 Hashed Password: 26019d4aa6c0dd3930105c472be2df1af52eefc5cdd78a15e96d2472721eb3e2
 History:
-Oppenheimer,17/12/23,09:00 am,1,1,hall-1,F1;F3;F2,Biography,Drama,History
-Barbie,17/12/23,11:15 am,2,1,hall-1,G3;G5,Adventure,Comedy,Fantasy
-Godzilla,17/12/23,11:15 am,5,1,hall-2,G4;G5,Action,Adventure,Drama
-Oppenheimer,17/12/23,09:00 am,1,1,hall-1,F4,Biography,Drama,History

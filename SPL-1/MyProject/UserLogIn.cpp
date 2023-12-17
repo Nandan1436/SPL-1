@@ -77,9 +77,9 @@ void userLogIn()
         }
     }
     if(check){
-        cout << "Login successful. Welcome back!" << endl;
-        cout<<"Taking you to User Menu...";
-        this_thread::sleep_for(chrono::seconds(2));
+        cout << "Login successful. Press any key to continue.." << endl;
+        char ch;
+        cin>>ch;
         UserMenu(user.email,user.userName);
     }
     else {

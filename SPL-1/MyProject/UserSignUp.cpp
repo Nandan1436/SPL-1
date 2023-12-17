@@ -93,10 +93,11 @@ void userSignUp()
     userFile << "Date of Birth: " << user.dateOfBirth << endl;
     userFile << "Email: " << user.email << endl;
     userFile << "Hashed Password: " << hashedPassword << endl;
-    userFile << "History:" << endl;
+    userFile << "History:";
 
-    cout<<"Sign up successful!"<<endl;
-    cout<<"Taking you to User Menu...";
-    this_thread::sleep_for(chrono::seconds(2));
+    cout<<"Sign up successful! Press any key to continue..."<<endl;
+    cout << "Login successful. Press any key to continue.." << endl;
+    char ch;
+    cin>>ch;
     UserMenu(user.email,user.userName);
 }

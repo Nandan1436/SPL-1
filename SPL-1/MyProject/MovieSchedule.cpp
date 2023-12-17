@@ -176,8 +176,9 @@ void makePayment(ChosenMovie& chosenMovie)
         cout<<"Not enough paid, please pay "<<total<<": "<<endl;
         cin>>pay;
     }
-    cout<<"Payment successful! Please wait for completion of ticket booking..."<<endl;
-    this_thread::sleep_for(chrono::seconds(2));
+    cout<<"Payment successful! Press any key to continue..."<<endl;
+    char ch;
+    cin>>ch;
     printReceipt(chosenMovie,total,pay);
 
 }
@@ -185,51 +186,21 @@ void makePayment(ChosenMovie& chosenMovie)
 void recordBooking(ChosenMovie& chosenMovie)
 {
     system("cls");
-    vector<ChosenMovie>movies;
-    ifstream file("BookingList.txt");
-    string line,snippet;
-    while(getline(file,line))
-    {
-        ChosenMovie m;
-        stringstream rowString(line);
-
-        getline(rowString,snippet,',');
-        m.email=snippet;
-        getline(rowString,snippet,',');
-        m.userName=snippet;
-        getline(rowString,snippet,',');
-        m.showTitle=snippet;
-        getline(rowString,snippet,',');
-        m.showDate=snippet;
-        getline(rowString,snippet,',');
-        m.showTime=snippet;
-        int x=0;
-        while(getline(rowString,snippet,','))
+    ofstream recordfile("BookingList.txt",std::ios::app);
+    recordfile<<chosenMovie.email<<","<<chosenMovie.userName<<","<<chosenMovie.showTitle<<","
+                  <<chosenMovie.showDate<<","<<chosenMovie.showTime<<",";
+        for(int j=0; j<chosenMovie.seats.size(); j++)
         {
-            m.seats.push_back(snippet);
-        }
-        movies.push_back(m);
-    }
-    cout<<"Info taken"<<endl;
-    movies.push_back(chosenMovie);
-    file.close();
-    ofstream recordfile("BookingList.txt");
-    for(int i=0; i<movies.size(); i++)
-    {
-        recordfile<<movies[i].email<<","<<movies[i].userName<<","<<movies[i].showTitle<<","
-                  <<movies[i].showDate<<","<<movies[i].showTime<<",";
-        for(int j=0; j<movies[i].seats.size(); j++)
-        {
-            recordfile<<movies[i].seats[j];
-            if(j!=movies[i].seats.size()-1)recordfile<<",";
+            recordfile<<chosenMovie.seats[j];
+            if(j!=chosenMovie.seats.size()-1)recordfile<<",";
         }
         recordfile<<"\n";
-    }
     recordfile.close();
 
     vector<string>genres;
     ifstream details("MovieDetails.txt");
     int found=0;
+    string line,snippet;
     while(getline(details,line))
     {
         if(line[0]=='1' && line.find(chosenMovie.showTitle)!=string::npos){
@@ -353,12 +324,24 @@ void bookTicket(ChosenMovie& chosenMovie)
     for(i=0; i<numOfTickets; i++)
     {
         int error=1;
-        cout<<"Enter seat number: ";
-        cin>>seats[i];
+        while(error){
+            cout<<"Enter seat number: ";
+            cin>>seats[i];
+            if(seats[i].size()>=2 && seats[i].size()<=3){
+                if(seats[i][0]>='A' && seats[i][0]<='J'){
+                    string num=seats[i].substr(1);
+                    int n=stoi(num);
+                    if(n>=1 && n<=10){
+                        error=0;
+                        break;
+                    }
+                }
+            }
+            if(error)cout<<"Invalid seat entered. Please try again."<<endl;
+        }
         error=1;
         chosenMovie.seats.push_back(seats[i]);
     }
-
 
     for(i=0; i<numOfTickets; i++)
     {
@@ -399,11 +382,7 @@ void bookTicket(ChosenMovie& chosenMovie)
             outputFile<<allInfo[i]<<"\n";
         }
     }
-    cout<<"Processing your seat selection..."<<endl;
     recordBooking(chosenMovie);
-
-    cout<<"Taking you to payment...";
-    this_thread::sleep_for(chrono::seconds(2));
     makePayment(chosenMovie);
     inputFile.close();
     outputFile.close();

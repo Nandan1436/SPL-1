@@ -319,8 +319,7 @@ void cancelTicket(string email,string userName)
     string phone;
     cin>>phone;
     cout<<"Refund sent"<<endl;
-    this_thread::sleep_for(chrono::seconds(2));
-    cout<<"Ticket canceled successfully!"<<endl;
+    cout<<"Ticket canceled successfully!"<<endl<<endl;
     char x;
     cout<<endl<<"Enter any key to return: ";
     cin>>x;
