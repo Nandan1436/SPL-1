@@ -1,14 +1,29 @@
 1 Oppenheimer
 2 Biography,Drama,History
-3 July 2023
+3 November 2023
 4 The story of American scientist, J. Robert Oppenheimer, and his role in the development of the atomic bomb.
 **
 1 Barbie
 2 Adventure,Comedy,Fantasy
-3 July 2023
+3 November 2023
 4 Barbie suffers a crisis that leads her to question her world and her existence.
 **
 1 Avengers Endgame
 2 Action,Adventure,Drama
-3 April 2023
+3 December 2023
 4 After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.
+**
+1 Jawan
+2 Action,Thriller
+3 October 2023
+4 A high-octane action thriller which outlines the emotional journey of a man who is set to rectify the wrongs in the society.
+** 
+1 Godzilla
+2 Action,Adventure,Drama
+3 December 2023
+4 Post war Japan is at its lowest point when a new crisis emerges in the form of a giant monster, baptized in the horrific power of the atomic bomb.
+**
+1 3 Idiots
+2 Comedy,Drama
+3 December 2023
+4 Two friends are searching for their long lost companion. They revisit their college days and recall the memories of their friend who inspired them to think differently, even as the rest of the world called them "idiots".

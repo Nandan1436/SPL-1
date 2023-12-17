@@ -16,7 +16,10 @@ void mainMenu()
     char choice;
     while(quit)
     {
-        cout<<"WELCOME"<<endl;
+        cout<<"\t\t\t\t\t\t*************************"<<endl;
+        cout<<"\t\t\t\t\t\t       Welcome To"<<endl;
+        cout<<"\t\t\t\t\t\t   C I N E V E R S E"<<endl;
+        cout<<"\t\t\t\t\t\t*************************"<<endl;
         cout<<"1.Login"<<endl;
         cout<<"2.Sign Up"<<endl;
         cout<<"3.Exit"<<endl;

@@ -15,6 +15,7 @@ struct movieHistory
 
 void viewHistory(string email)
 {
+    system("cls");
     ifstream file(USERS_DIRECTORY+email+".txt");
     for(int i=0;i<6;i++){
         string temp;
@@ -62,7 +63,9 @@ void viewHistory(string email)
     }
     file.close();
 
-    cout<<"\t\t\t\t\t*****USER HISTORY*****"<<endl;
+    cout<<"\t\t\t\t\t\t **************************"<<endl;
+    cout<<"\t\t\t\t\t\t   U S E R  H I S T O R Y"<<endl;
+    cout<<"\t\t\t\t\t\t **************************"<<endl<<endl;
     cout<<"-------------------------------------------------------------------------------------------------------------"<<endl;
     cout<<left<<setw(10)<<"NUMBER"<<setw(40)<<"TITLE"<<setw(10)<<"DATE"<<setw(15)<<"TIME"<<setw(15)<<"Hall NO."<<setw(15)<<"SEATS"<<endl;
     cout<<"-------------------------------------------------------------------------------------------------------------"<<endl;

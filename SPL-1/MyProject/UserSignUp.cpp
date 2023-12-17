@@ -39,7 +39,9 @@ void userSignUp()
     User user;
     string email,password,username,fullName,dateOfBirth,temp,line;
     int check=1;
-    cout<<"WELCOME TO CINEVERSE"<<endl;
+    cout<<"\t\t\t\t\t\t*************************"<<endl;
+    cout<<"\t\t\t\t\t\t  WELCOME TO CINEVERSE"<<endl;
+    cout<<"\t\t\t\t\t\t*************************"<<endl;
     cout<<"Create an account"<<endl;
     while(check){
         cout<<"**Enter your email: ";

@@ -37,7 +37,9 @@ void userLogIn()
     const string USERS_DIRECTORY = "Users\\";
     User user;
     int check=0;
-    cout<<"LOGIN"<<endl;
+    cout<<"\t\t\t\t\t\t\t*************"<<endl;
+    cout<<"\t\t\t\t\t\t\t   LOG IN"<<endl;
+    cout<<"\t\t\t\t\t\t\t*************"<<endl;
     for(int i=0;i<3;i++)
     {
         cout<<"**Enter your email: ";

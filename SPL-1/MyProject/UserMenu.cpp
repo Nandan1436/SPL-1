@@ -11,11 +11,13 @@ using namespace std;
 void UserMenu(string email,string userName)
 {
     system("cls");
-    cout<<"Welcome, "<<userName<<"!"<<endl<<endl;
     while(true)
     {
         char input;
-        cout<<"*****USER MENU*****"<<endl;
+        cout<<"\t\t\t\t\t\t************************"<<endl;
+        cout<<"\t\t\t\t\t\t   U S E R   M E N U"<<endl;
+        cout<<"\t\t\t\t\t\t************************"<<endl<<endl;
+        cout<<"Welcome, "<<userName<<"!"<<endl<<endl;
         cout<<"1.Book a ticket"<<endl;
         cout<<"2.View Food and Drinks available in the cinema"<<endl;
         cout<<"3.Cancel a Ticket"<<endl;

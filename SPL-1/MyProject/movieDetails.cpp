@@ -8,7 +8,9 @@ void movieDetails()
 {
     system("cls");
     ifstream details("MovieDetails.txt");
-    cout<<"MOVIE DETAILS"<<endl<<endl;
+    cout<<"\t\t\t\t\t\t********************************"<<endl;
+    cout<<"\t\t\t\t\t\t    M O V I E  D E T A I L S"<<endl;
+    cout<<"\t\t\t\t\t\t********************************"<<endl<<endl;
     string line;
     while(getline(details,line))
     {

@@ -38,8 +38,9 @@ void movieSchedule(string email,string userName)
             cout<<"Error opening file!"<<endl;
             exit(0);
         }
-        cout<<""<<endl;
-        cout<<"MOVIE SCHEDULE"<<endl<<endl;
+        cout<<"\t\t\t\t\t\t******************************"<<endl;
+        cout<<"\t\t\t\t\t\t  M O V I E  S C H E D U L E"<<endl;
+        cout<<"\t\t\t\t\t\t******************************"<<endl;
         cout<<"------------------------------------------------------------------------------------------------------------------"<<endl;
         cout<<left<<setw(15)<<"SERIAL NO."<<setw(10)<<"DATE"<<setw(15)<<"DAY"<<setw(15)<<"Hall NO."<<setw(40)<<"TITLE"<<setw(10)<<"TIME SLOTS"<<endl;
         cout<<"------------------------------------------------------------------------------------------------------------------"<<endl;
@@ -90,7 +91,6 @@ void movieSchedule(string email,string userName)
         cout<<endl;
         recommendation(email);
 
-        cout<<endl;
         cout<<"Ticket price for hall-1: 450"<<endl;
         cout<<"Ticket price for hall-2: 550"<<endl;
 
@@ -269,7 +269,6 @@ void bookTicket(ChosenMovie& chosenMovie)
 {
     system("cls");
     ifstream inputFile("Seats.txt");
-
     int i=0,j=0,k=0,seatsAvailable=0;
     string line;
 
@@ -304,32 +303,33 @@ void bookTicket(ChosenMovie& chosenMovie)
         k=0;
     }
 
-    cout<<"-------------------------------------------------------------------"<<endl;
-    cout<<"                     S   C   R   E   E   N                           "<<endl;
-    cout<<"-------------------------------------------------------------------"<<endl;
-    cout<<"-------------------------------------------------------------------"<<endl;
+    cout<<"\t\t*****************************************************************************************"<<endl;
+    cout<<"\t\t                                 S    C    R    E    E    N                           "<<endl;
+    cout<<"\t\t*****************************************************************************************"<<endl<<endl;
 
     for(i=0; i<10; i++)
     {
+        cout<<"\t\t  ";
         for(j=0; j<10; j++)
         {
             if(seatArr[i][j]=="X")
             {
                 cout << "\033[31m";
-                cout<<left<<setw(7)<<seatArr[i][j];
+                cout<<left<<setw(9)<<seatArr[i][j];
                 cout << "\033[0m";
             }
             else
             {
                 cout << "\033[32m";
-                cout<<left<<setw(7)<<seatArr[i][j];
+                cout<<left<<setw(9)<<seatArr[i][j];
                 cout << "\033[0m";
                 seatsAvailable++;
             }
         }
         cout<<endl;
-        cout<<"-------------------------------------------------------------------"<<endl;
+        cout<<"\t\t........................................................................................."<<endl;
     }
+    cout<<endl;
     int numOfTickets,check=0;
     cout<<"Enter number of tickets to buy(Maximum 5): ";
     cin>>numOfTickets;
@@ -353,15 +353,8 @@ void bookTicket(ChosenMovie& chosenMovie)
     for(i=0; i<numOfTickets; i++)
     {
         int error=1;
-        while(error){
-            cout<<"Enter seat number: ";
-            cin>>seats[i];
-            if(seats[i][0]<'A' || seats[i][0]>'J' || (seats[i].size()==2 && (seats[i][1]<'1' || seats[i][1]>'9')) ||
-               (seats[i].size()==3 && (seats[i][1]!='1' || seats[i][2]!='0'))){
-                    cout<<"Please enter correct seat number."<<endl;
-               }
-            else error=0;
-        }
+        cout<<"Enter seat number: ";
+        cin>>seats[i];
         error=1;
         chosenMovie.seats.push_back(seats[i]);
     }

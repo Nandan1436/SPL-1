@@ -88,6 +88,7 @@ vector<currentMovie> getGenres()
     ifstream details("MovieDetails.txt");
     string line;
     currentMovie temp;
+
     while(getline(details,line))
     {
         if(line[0]=='1'){
@@ -105,9 +106,12 @@ vector<currentMovie> getGenres()
             }
             movies.push_back(temp);
         }
+        else if(line.size()==2 && line=="**"){
+            temp.title="";
+            temp.genre.clear();
+        }
     }
     details.close();
-
     return movies;
 }
 
@@ -126,8 +130,10 @@ set<string>recommedMovies(map<string,int>freq,vector<currentMovie>allGenres)
 
     for(int i=0;i<allGenres.size();i++){
         for(int j=0;j<allGenres[i].genre.size();j++){
-            if(find(topGenres.begin(),topGenres.end(),allGenres[i].genre[j])!=topGenres.end()){
-                topMovies.insert(allGenres[i].title);
+            for(int k=0;k<topGenres.size();k++){
+                if(allGenres[i].genre[j]==topGenres[k]){
+                    topMovies.insert(allGenres[i].title);
+                }
             }
         }
     }
